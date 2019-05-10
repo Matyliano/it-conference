@@ -2,7 +2,6 @@ package sii.matyliano.spring.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import sii.matyliano.spring.dto.UserDto;
 import sii.matyliano.spring.entity.User;
 
 
@@ -10,5 +9,5 @@ import sii.matyliano.spring.entity.User;
 public interface UserRepository extends JpaRepository<User,Long> {
 
     User findByEmail(String email);
-    User save(UserDto registration);
+//    User save(UserDto registration);
 }

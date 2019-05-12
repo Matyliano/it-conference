@@ -1,17 +1,16 @@
 package sii.matyliano.spring;
 
 
-import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.formlayout.FormLayout;
-import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.textfield.PasswordField;
-import com.vaadin.flow.component.textfield.TextField;
 
 
+import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.PWA;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.vaadin.flow.component.button.Button;
+import sii.matyliano.spring.views.LoginView;
+
 
 @Route(value = MainView.MAINVIEW)
 public class MainView extends VerticalLayout {
@@ -19,12 +18,16 @@ public class MainView extends VerticalLayout {
 
     public static final String MAINVIEW = "main";
 
-    public MainView(@Autowired MessageBean bean) {
+    public MainView() {
 
+        Image image = new Image("batman.png","Batman");
+        image.setWidth("300px");
+        Button button = new Button("Go to login page");
+        button.addClickListener( event ->
+                UI.getCurrent().navigate(LoginView.ROUTE));
 
-        Button button = new Button("Click me",
-                e -> Notification.show(bean.getMessage()));
-        add(button);
+        add(image,button);
+
     }
 
 }

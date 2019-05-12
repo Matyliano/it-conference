@@ -1,16 +1,10 @@
-package sii.matyliano.spring;
+package sii.matyliano.spring.views;
 
 
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.textfield.PasswordField;
-import com.vaadin.flow.component.textfield.TextField;
-
-
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.PWA;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Route(value = MainView.MAINVIEW)

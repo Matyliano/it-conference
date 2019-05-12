@@ -1,7 +1,8 @@
-package sii.matyliano.spring;
+package sii.matyliano.spring.views;
+
+import org.springframework.stereotype.Service;
 
 import java.time.LocalTime;
-import org.springframework.stereotype.Service;
 
 @Service
 public class MessageBean {

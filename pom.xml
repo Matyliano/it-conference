@@ -4,7 +4,11 @@
     <artifactId>itconference</artifactId>
     <name>ITConference</name>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>backend</module>
+        <module>ui</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

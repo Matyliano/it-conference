@@ -8,6 +8,6 @@ import sii.matyliano.spring.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User,Long> {
 
-    User findByName(String username);
+    User findByUsername(String username);
 
 }

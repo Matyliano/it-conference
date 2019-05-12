@@ -10,6 +10,8 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.navigator.Navigator;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Route(value = LoginView.ROUTE)
 @PageTitle("Login")
@@ -17,6 +19,9 @@ import com.vaadin.flow.router.Route;
 public class LoginView extends VerticalLayout {
 
 public static final String ROUTE = "login";
+
+
+Navigator navigator;
 
     public LoginView() {
         TextField userNameTextField = new TextField("Username");

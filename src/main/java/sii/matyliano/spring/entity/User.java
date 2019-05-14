@@ -1,9 +1,12 @@
 package sii.matyliano.spring.entity;
 
+
 import javax.persistence.*;
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
+@Table(name = "users")
 public class User {
 
 
@@ -13,8 +16,17 @@ public class User {
 
 
     private String username;
-    private String password;
+    private String email;
 
+
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "users_lectures",
+            joinColumns = @JoinColumn(name = "users_id"),
+            inverseJoinColumns = @JoinColumn(name = "lectures_id"))
+    private List<Lecture> lectures = new ArrayList<>();
 
     public User() {
     }
@@ -22,22 +34,20 @@ public class User {
 
     public User(String username, String password) {
         this.username = username;
-        this.password = password;
+        this.email = email;
     }
 
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+
+    public String getEmail() {
+        return email;
     }
 
-    public String getPassword() {
-        return password;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public boolean addLecture(Lecture lecture) {
+        return true;
     }
 }

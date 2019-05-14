@@ -16,7 +16,7 @@ public class MainView extends VerticalLayout {
 
     public MainView() {
         Button button = new Button("Go to login page");
-        button.addClickListener( event ->
+        button.addClickListener(event ->
                 UI.getCurrent().navigate(LoginView.ROUTE));
 
         add(button);

@@ -1,8 +1,6 @@
 package sii.matyliano.spring.entity;
 
 
-
-
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -28,10 +26,10 @@ public class Conference {
     private List<User> users = new ArrayList<>();
 
     public Conference() {
-        startDate = LocalDate.of(2019,6,1);
-        endDate = LocalDate.of(2019,6,2);
-        startTime = LocalTime.of(10,0);
-        endTime = LocalTime.of(13,45);
+        startDate = LocalDate.of(2019, 6, 1);
+        endDate = LocalDate.of(2019, 6, 2);
+        startTime = LocalTime.of(10, 0);
+        endTime = LocalTime.of(13, 45);
     }
 
 }

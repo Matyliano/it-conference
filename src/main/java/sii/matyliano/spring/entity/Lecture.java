@@ -30,12 +30,15 @@ public class Lecture {
     private List<User> users = new ArrayList<>();
 
     private static int counter = 0;
+    private int lectureId;
 
 
     public Lecture(String name, LocalDate date, LocalTime time) {
+        this.lectureId = counter;
         this.name = name;
         this.date = date;
         this.time = time;
+        counter++;
     }
 
     public Long getId() {
@@ -52,6 +55,30 @@ public class Lecture {
 
     public LocalTime getTime() {
         return time;
+    }
+
+    public int getSize() {
+        return users.size();
+    }
+
+    public boolean isFull() {
+        if (users.size() == MAX_PEOPLE) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean addUser(User user) {
+        if (isFull()) {
+            System.out.println("Sorry! This lecture hasn't free seats anymore ");
+            return false;
+        } else if (users.contains(user)) {
+            System.out.println("Error! This user has already signed up for this lecture ");
+            return false;
+        } else {
+            users.add(user);
+        }
+        return true;
     }
 
 }

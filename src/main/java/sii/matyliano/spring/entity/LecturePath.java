@@ -26,4 +26,8 @@ public class LecturePath {
         return lectures;
     }
 
+    public void addLecture(Lecture lecture) {
+        lectures.add(lecture);
+    }
+
 }

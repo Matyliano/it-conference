@@ -24,4 +24,6 @@ public class MainView extends VerticalLayout {
 
     }
 
+    //Grid, żeby tu wyświetlić listę ścieżek
+
 }

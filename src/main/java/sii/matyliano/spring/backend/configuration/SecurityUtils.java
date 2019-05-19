@@ -1,4 +1,4 @@
-package sii.matyliano.spring.configuration;
+package sii.matyliano.spring.backend.configuration;
 
 import com.vaadin.flow.server.ServletHelper;
 import com.vaadin.flow.shared.ApplicationConstants;

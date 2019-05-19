@@ -1,4 +1,4 @@
-package sii.matyliano.spring.configuration;
+package sii.matyliano.spring.backend.configuration;
 
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 

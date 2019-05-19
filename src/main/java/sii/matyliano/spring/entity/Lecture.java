@@ -26,6 +26,7 @@ public class Lecture {
     private LocalDate date;
     private LocalTime time;
 
+
     @ManyToMany(mappedBy = "lectures")
     private List<User> users = new ArrayList<>();
 
@@ -80,5 +81,6 @@ public class Lecture {
         }
         return true;
     }
+
 
 }

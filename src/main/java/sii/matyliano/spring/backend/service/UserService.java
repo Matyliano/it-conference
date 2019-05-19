@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import sii.matyliano.spring.backend.dto.UserDto;
 import sii.matyliano.spring.entity.Role;
 import sii.matyliano.spring.entity.User;
-import sii.matyliano.spring.repository.UserRepository;
+import sii.matyliano.spring.backend.repository.UserRepository;
 
 import java.util.Arrays;
 import java.util.Collection;

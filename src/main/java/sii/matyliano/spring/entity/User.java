@@ -101,7 +101,7 @@ public class User {
     @JoinTable(
             name = "users_roles",
             joinColumns = @JoinColumn(name = "users_id"),
-           inverseJoinColumns = @JoinColumn(name = "roles_id"))
+            inverseJoinColumns = @JoinColumn(name = "roles_id"))
     public Collection<Role> getRoles() {
         return roles;
     }

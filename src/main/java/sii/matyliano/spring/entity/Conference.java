@@ -1,7 +1,6 @@
 package sii.matyliano.spring.entity;
 
 
-import javax.persistence.Entity;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;

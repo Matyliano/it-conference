@@ -6,28 +6,47 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
+import com.vaadin.ui.Panel;
 import sii.matyliano.spring.MainView;
 
 @Route(value = LoginView.ROUTE)
 public class LoginView extends VerticalLayout {
 
-public static final String ROUTE = "login";
+    public static final String ROUTE = "login";
+
+    private VerticalLayout root;
+    private Panel panel;
+    private TextField username;
+    private PasswordField password;
+    private Button login;
+    private Button register;
 
 
     public LoginView() {
 
-        TextField username = new TextField("Username");
+        root = new VerticalLayout();
+        root.setMargin(true);
+        root.setHeight("100%");
+
+        panel = new Panel("Login");
+        panel.setSizeUndefined();
+
+        username = new TextField("Username");
         username.setValue("user");
 
-        PasswordField password = new PasswordField("Password");
+        password = new PasswordField("Password");
         password.setValue("password");
 
-        Button submitButton = new Button("Login");
+        login = new Button("Login");
+        register = new Button("register");
 
-        submitButton.addClickListener( event ->
+        login.addClickListener(event ->
                 UI.getCurrent().navigate(MainView.MAINVIEW));
 
-        add(username,password,submitButton);
+        register.addClickListener(event ->
+                UI.getCurrent().navigate(RegisterView.REGISTER));
+
+        add(username, password, login, register);
 
     }
     //HAAAA! It's ALIVE! FINALLY!

@@ -1,7 +1,6 @@
 package sii.matyliano.spring.backend.dto;
 
 
-
 import org.hibernate.validator.constraints.NotEmpty;
 import sii.matyliano.spring.backend.validator.ValidEmail;
 

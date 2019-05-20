@@ -19,7 +19,4 @@ public class Notification {
     private LocalDate notificationDate;
 
 
-
-
-
 }

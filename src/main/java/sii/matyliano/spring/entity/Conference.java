@@ -35,52 +35,52 @@ public class Conference {
         endTime = LocalTime.of(13, 45);
     }
 
-    private void initLecturePaths() {
-        LocalDate current = startDate;
-
-        while (!current.isAfter(endDate)) {
-            List<LecturePath> paths = Arrays.asList(new LecturePath[3]);
-            dayPaths.add(paths);
-            current = current.plusDays(1);
-        }
-
-        LocalDate date = startDate;
-        LocalDate date2 = startDate.plusDays(1);
-        LocalTime time = startTime;
-        LocalTime time2 = time.plusHours(2);
-
-        LecturePath path0 = new LecturePath("First Path");
-        path0.addLecture(new Lecture("Co w Javie piszczy ", date, time));
-        path0.addLecture(new Lecture("Vaadin dla opornych", date, time2));
-
-        LecturePath path01 = new LecturePath("Second Path");
-        path01.addLecture(new Lecture("Nie taki Python straszny", date, time));
-        path01.addLecture(new Lecture("", date, time2));
-
-        LecturePath path02 = new LecturePath("Third Path");
-        path02.addLecture(new Lecture("", date, time));
-        path02.addLecture(new Lecture("", date, time2));
-
-        LecturePath path10 = new LecturePath("First Path");
-        path10.addLecture(new Lecture("", date2, time2));
-        path10.addLecture(new Lecture("  ", date2, time2));
-
-        LecturePath path20 = new LecturePath("Second Path");
-        path20.addLecture(new Lecture("", date2, time2));
-        path20.addLecture(new Lecture("", date2, time2));
-
-        LecturePath path30 = new LecturePath("Third Path");
-        path30.addLecture(new Lecture("", date2, time2));
-        path30.addLecture(new Lecture("", date2, time2));
-
-        dayPaths.get(0).set(0, path0);
-        dayPaths.get(0).set(1, path01);
-        dayPaths.get(0).set(2, path02);
-        dayPaths.get(1).set(0, path10);
-        dayPaths.get(1).set(1, path20);
-        dayPaths.get(1).set(2, path30);
-
-    }
+//    private void initLecturePaths() {
+//        LocalDate current = startDate;
+//
+//        while (!current.isAfter(endDate)) {
+//            List<LecturePath> paths = Arrays.asList(new LecturePath[3]);
+//            dayPaths.add(paths);
+//            current = current.plusDays(1);
+//        }
+//
+//        LocalDate date = startDate;
+//        LocalDate date2 = startDate.plusDays(1);
+//        LocalTime time = startTime;
+//        LocalTime time2 = time.plusHours(2);
+//
+//        LecturePath path0 = new LecturePath("First Path");
+//        path0.addLecture(new Lecture("Co w Javie piszczy ", date, time));
+//        path0.addLecture(new Lecture("Vaadin dla opornych", date, time2));
+//
+//        LecturePath path01 = new LecturePath("Second Path");
+//        path01.addLecture(new Lecture("Nie taki Python straszny", date, time));
+//        path01.addLecture(new Lecture("", date, time2));
+//
+//        LecturePath path02 = new LecturePath("Third Path");
+//        path02.addLecture(new Lecture("", date, time));
+//        path02.addLecture(new Lecture("", date, time2));
+//
+//        LecturePath path10 = new LecturePath("First Path");
+//        path10.addLecture(new Lecture("", date2, time2));
+//        path10.addLecture(new Lecture("  ", date2, time2));
+//
+//        LecturePath path20 = new LecturePath("Second Path");
+//        path20.addLecture(new Lecture("", date2, time2));
+//        path20.addLecture(new Lecture("", date2, time2));
+//
+//        LecturePath path30 = new LecturePath("Third Path");
+//        path30.addLecture(new Lecture("", date2, time2));
+//        path30.addLecture(new Lecture("", date2, time2));
+//
+//        dayPaths.get(0).set(0, path0);
+//        dayPaths.get(0).set(1, path01);
+//        dayPaths.get(0).set(2, path02);
+//        dayPaths.get(1).set(0, path10);
+//        dayPaths.get(1).set(1, path20);
+//        dayPaths.get(1).set(2, path30);
+//
+//    }
 
     public boolean signIn(int lectureId) {
         if (logged == null) {

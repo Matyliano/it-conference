@@ -5,6 +5,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import com.vaadin.navigator.ViewChangeListener;
+import sii.matyliano.spring.views.ConferenceView;
 import sii.matyliano.spring.views.LoginView;
 
 
@@ -25,9 +26,9 @@ public class MainView extends VerticalLayout {
         add(button);
 
         Button button2 = new Button("Go deeper");
-//        button2.addClickListener(event ->
-//              //  UI.getCurrent().navigate(ConferenceView.CONFERENCE));
-//        );
+        button2.addClickListener(event ->
+                UI.getCurrent().navigate(ConferenceView.CONFERENCE));
+
         add(button2);
 
         setSizeFull();
@@ -39,6 +40,6 @@ public class MainView extends VerticalLayout {
     public void enter(ViewChangeListener.ViewChangeEvent event) {
     }
 
-    //Grid, żeby tu wyświetlić listę ścieżek
+    //Grid, żeby tu wyświetlić listę ścieżek.
 
 }
